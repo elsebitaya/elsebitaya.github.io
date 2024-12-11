@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz primer mes 🌹</title>
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(180deg, #ffccd5, #ffc8e2, #ffe4f2);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+      overflow-y: scroll;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Pantalla inicial */
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      color: #e63946;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 2s ease-out;
+    }
+
+    .intro button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #e63946;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .intro button:hover {
+      background-color: #d62839;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Decoraciones animadas */
+    .falling {
+      position: fixed;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+      pointer-events: none;
+      animation: fall 5s linear infinite, sway 5s ease-in-out infinite;
+    }
+
+    .falling.rose {
+      font-size: 2rem;
+      color: #e63946;
+    }
+
+    .falling.star {
+      font-size: 1.5rem;
+      color: #f9d71c;
+    }
+
+    @keyframes fall {
+      0% { top: -10%; opacity: 1; }
+      100% { top: 110%; opacity: 0; }
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: translateX(-50%) rotate(0deg); }
+      50% { transform: translateX(-50%) rotate(15deg); }
+    }
+
+    /* Página del álbum */
+    .album {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .album img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      transition: transform 0.5s;
+    }
+
+    .album img:hover {
+      transform: scale(1.1);
+    }
+
+    .album p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin: 10px auto;
+      max-width: 90%;
+    }
+
+    .hidden-message {
+      margin-top: 20px;
+      display: none;
+      font-size: 1.4rem;
+      color: #e63946;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    @media (max-width: 768px) {
+      .intro h1 {
+        font-size: 2.5rem;
+      }
+
+      .intro button {
+        font-size: 1rem;
+      }
+
+      .album p {
+        font-size: 1rem;
+      }
+
+      .hidden-message {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Decoraciones animadas -->
+  <div class="falling rose" style="left: 10%;">🌹</div>
+  <div class="falling rose" style="left: 30%; animation-delay: 1s;">🌹</div>
+  <div class="falling star" style="left: 50%; animation-delay: 2s;">✨</div>
+  <div class="falling star" style="left: 70%; animation-delay: 3s;">✨</div>
+  <div class="falling rose" style="left: 90%; animation-delay: 4s;">🌹</div>
+
+  <!-- Pantalla inicial -->
+  <div class="intro">
+    <h1>Feliz primer mes 🌹</h1>
+    <h3>Hola mi rosa, para mí el celebrar un mes a tu lado marca más que un comienzo a un nuevo amor, si no también el comienzo de una historia; algo de que si estoy seguro es que esta va a hacer de aquellas historias llenas de momentos colmados de adrenalina, intriga, incertidumbre,
+         felicidad, tristeza, pero sobre todo, de mucho amor. De aquellas historias que no queremos saber final, como la del principio. pero como toda historia tiene su comienzo y este es el de nosotros...</h3>
+    <button onclick="showAlbum()">Continuar</button>
+  </div>
+
+  <!-- Página del álbum -->
+  <div class="album">
+    <h2>Nuestro comienzo 💕</h2>
+    <div>
+      <img src="1.png" alt="Recuerdo 1">
+      <p>Aun recuerdo esa conversación, este primer contacto contigo, el primero contacto con el amor de mi vida. Esa sensación de intriga pero a la vez
+         llena de confianza aún no se borra de mi cuerpo, sabía que algo bueno iba a pasar, al llegar la notificación, mi cuerpo se inundó en nervios, aquella chica que andaba pensando y que no hacía más que likear sus historias me había hablado. Sólo me quedaba responder. 
+         No se si lo notaste pero esa conversación que tuvimos, siempre fue fluida hasta el día de hoy, 
+         parecíamos conocernos de antes, como dos almas dispuestas a encontrarse de nuevo.</p>
+    </div>
+    <div>
+      <img src="2.png" alt="Recuerdo 2">
+      <p>Muestra primera ves en persona, el primer contacto físico que tuvimos, ese día fue especial, simplemente surgió de algo espontáneo, pero supe que no fue por obra del humano, si no de Dios, que decidió que nuestros cuerpos estaban destinados a juntarse. En la manera de como surgió todo me hizo pensar así, por eso te lo decía "Dios no junta casualidades junta propositos". Recuerdo que como en la primera ves que hablamos estaba lleno de nervios, pero aun confiado de que todo iba a salir bien. Al momento de verte simplemente todo a mi al rededor se nubló, no paraba de verte, hasta el momento del primer abrazo, el cual estará en mi mente toda mi vida. Mi cuerpo se lleno tan rápido que la sensación de satisfacción y de placer no faltaron, fue como si algo hiciera clic dentro de mi, activaste algo, que fue mi corazón.</p>
+    </div>
+    <h2>Desde aquí las cosas se volvieron cada vez más únicas</h2>
+    <div>
+        <img src="3.png" alt="Recuerdo 3">
+        <p>Como esta ves, la cual comí por primera ves los macarrones más ricos de mi vida. También probé lo más delicioso y increíble que mi alma y piel a sentido que fue tu cuerpo, esa sensación de amor que sentía era indescriptible, se volvió algo en mi inefable, de el solo recuerdarlo, mi corazón late tan rápido y puedo sentir como se caliente de tanto amor que brotó en ese momento, fue mágico, el tocar y ver tu cuerpo fue algo increíble. Tuve a la obra de arte más hermosa en mis manos, tuve tu cuerpo, algo que hasta la feche es muy especial para mi y me tiene enamorado cada día más.</p>
+    </div>
+    <div>
+        <img src="4.png" alt="Recuerdo 4">
+        <p>Poco a poco fuimos compaginando más, viviendo cada ves nuevas experiencias juntos, fui enamorandome de la mujer indicada, mi mente y corazón estaba cada vez más convencidos de querer pasar una vida junto a ti. En ese tiempo conocí tu esencia, llena de amor y bondad, conocí más que una mujer dispuesta a pelar por su futuro día tras día y que por nada se rendía, si no también, una niña la cual tenia que cuidar, llenarla de amor todos los días, comprenderla, escucharla y apoyarla. De la cual mi niño interior también se enamoro y esta dispuesto a cada una de esas cosas cumplirlas sin falta alguna. En ti vi muchas cosas de la que creía que el mundo padecía, pero entendí que no, solo que malos hombres una ves habían dañado y desperdiciado. Lo cual me prometo a mi mismo cambiarlo.</p>
+    </div>
+    <div>
+        <img src="5.png" alt="Recuerdo 5">
+        <p>Y así fue día tras día me esmero por ser mejor hombre, mejor novio y mejor persona, para esa mujer que se merece todo, que el mundo aveces es tan injustos y no le da lo que merece. Aquella niña de ojos lindos los cuales la luna se colma de envidia ya que opaca su belleza. He intentado día tras día darte lo mejor de mi, demostrarte que no te quiero solo para un rato, si no para una vida entera, te quiero para vivir momentos inolvidables, para cumplir mis metas y que tu estés a mi lado. TE QUIERO PARA SIEMPRE.</p>
+    </div>
+    <div>
+        <img src="6.png" alt="recuerdo 6">
+        <p>Así como también tu cuerpo el cual todos los días me recuerda que aparte de tener una esencia tan maravillosa y un ser tan bello, también tienes demasiado otras cosas por la cual deslumbrarce todos los días. Empezamos por tu pelo el cual poco a poco has ido dejando crecer y cada vez se ve más hermosa. tus ojos lleno de luz y de tonos marrones que hacen juego con tu pelo, simples los más lindos de la galaxia. Tu boca llena de deseo la cual le da paso a tu hermosa voz y con esos labios tan increíbles que dan ganas de no parar de besarlos. Tus cachetes bellos los cuales no puedo no besarlos. Tus cuelo tus manos, tus brazos en perfecta simetría, dándole esa estética hermosa a tu cuerpo. tus pechos suaves, lindos y con la medida perfecta, no puedo pedir más de ellos. Tu cintura ufffffff, indescriptible, me pierdo en esa curva hermosa. Tu culo también me deja sin palabras, simplemente esa pieza que le da perfección a cada unas de las partes de tu cuerpo. Eres arte, tu cuerpo es demasiado rico, sin hblar de otras partes que me abstengo de callar que me vuelven un loco por ti, eres tan rica como no tienes idea tu cuerpo completo es hermoso. Sin duda lo más bello que he tenido en mis manos</p>
+      </div> 
+      <div>
+        <img src="7.png" alt="recuerdo 6">
+        <p>Y sin duda siempre te amaré eres esa niña la cual se ha ganado mi corazón y cada parte de mi ser, has entrado a mi vida a aportarme amor y apoyo el cual me hacia falta, eres increíble y muy capaz de todo, cada pequeño propósito aunque sea difícil, lo logras y estoy demasiado orgulloso de ti. Eres la niña más hermosa en mi toda mi vida y quiero que duramos hasta viejitos y puedas casarte conmigo porque enserió no puedo perder a esa gran mujer que eres tu.</p>
+      </div> 
+      <img src="8.png" alt="recuerdo 6">
+      <p>Todos los momentos que pasamos juntos me rectifica porque te amo tan fuerte, no se si has notado, que no puedo parar de mirar, cada pequeña parte de ti me encanta, admiro tu forma de ser, de hablar y moverte, me fascina todo de ti, sencillamente estoy enamorado sin duda alguna y puedo estar seguro que me enamore de la mejor mujer del mundo, se que serás muy buena novia, buena madre, buena abuela, buena acompañante en mi vida y sobretodo excelente mujer, aunque ya lo estas logrando. Sin dudar te deje pasar a mi corazón, el cual sin ningún esfuerzo tu misma le devolviste esa fuerza que lo hace latir, te volviste mi motivación y esmero. Eres ese motor que le da un rumbo a mi vida, eres lo que necesitaba pero no sabia, eres esa prueba que Dios me dio para rectificar su existencia, eres mi rosa única en su especie y te amaré todo mi vida, sin importar los problemas y las circunstancias. Simplemente amarte fue lo más genuino y sincero que he hecho en mi vida. Te amo mi rosa</p>
+      <h2>Te amo más de lo que las palabras pueden expresar ❤️
+        <br>Gracias por este mes juntos, espeo vivir muchos mas a tu lado eres la mujer que quiero para toda mi vida, siempre seras tu, la unica que mis ojos miren, la unica que hace latir mi corazon fuertemente, te amo como no tienes idea, siempre se amare, de aqui JADES-GS-Z14-O. te amo mi rosa y espero pasar mucho mas tiempo a tu lado.FELIZ PRIMER MES MI AMOR ❤‍🔥🌹<br/></h2>
+    </div>
+
+  </div>
+
+  <script>
+    function showAlbum() {
+      document.querySelector('.intro').style.display = 'none';
+      document.querySelector('.album').style.display = 'block';
+    }
+
+    function revealMessage() {
+      const message = document.querySelector('.hidden-message');
+      message.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
